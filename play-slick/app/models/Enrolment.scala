@@ -10,4 +10,5 @@ case class Enrolment(enrolmentId: UUID,
                      datePrint: Option[Timestamp] = None,
                      dateActivated: Option[Timestamp] = None,
                      failedActivationCount: Int,
-                     friendlyName: Option[String] = None)
+                     friendlyName: Option[String] = None,
+                     serviceId: UUID)

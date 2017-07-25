@@ -21,7 +21,7 @@ class TestController @Inject()(enrolmentRepository: EnrolmentRepository)
 
     val ts = Timestamp.from(new java.util.Date().toInstant)
 
-    enrolmentRepository.create(UUID.randomUUID(), "IR-SA", "ABC123XYZ", ts, 0)
+    enrolmentRepository.create(UUID.randomUUID(), "IR-SA", "ABC123XYZ", ts, 0, UUID.randomUUID())
       .flatMap(_ =>
         enrolmentRepository.list().map(
           enr => Ok(enr.toString())
